@@ -1,5 +1,4 @@
 import React from "react";
-import {} from "lucide-react";
 import Link from "next/link";
 
 type SidebarLinkProps = {
@@ -9,7 +8,7 @@ type SidebarLinkProps = {
 };
 
 const SidebarLink: React.FC<SidebarLinkProps> = ({ href, name, Icon }) => {
-  const activePage = href === window.location.pathname;
+  const activePage = href === "/";
 
   return (
     <li className=" w-full">
