@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --max-width: 1920px;
+  --sidebar-narrow-width: 120px;
+  --sidebar-expand-width: 280px;
+  --sidebar-head-height: 80px;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-300 flex justify-center;
+  }
+
+  aside {
+    @apply data-[expanded=true]:w-[var(--sidebar-expand-width)] data-[expanded=false]:w-[var(--sidebar-narrow-width)] flex flex-col items-center border-r-2 transition;
+  }
+
+  main {
+    @apply w-full h-screen overflow-auto flex flex-col;
+  }
+
+  header {
+    @apply flex items-center h-[var(--sidebar-head-height)] border-b;
+  }
+}
+
+@layer components {
+  #root {
+    @apply max-w-[var(--max-width)] w-full flex bg-white;
+  }
+
+  .sidebar-animate-logo {
+    @apply scale-0 opacity-0 transition 
+      group-data-[expanded=true]:scale-100 
+      group-data-[expanded=true]:opacity-100
+      group-data-[expanded=true]:-translate-x-10;
+  }
+
+  .sidebar-animate-main-logo {
+    @apply scale-100 opacity-100 sidebar-animate-logo;
+  }
+  .sidebar-animate-pizza {
+    @apply transition
+      group-data-[expanded=true]:size-8 
+      group-data-[expanded=true]:-translate-x-10
+      group-data-[expanded=false]:-translate-x-[118px]
+      group-data-[expanded=false]:-translate-y-5;
+  }
+}
+
+@layer utilities {
+  .transition {
+    @apply transition-all duration-500;
+  }
+}
