@@ -5,11 +5,16 @@
 :root {
   --max-width: 1920px;
   --sidebar-narrow-width: 120px;
-  --sidebar-expand-width: 280px;
+  --sidebar-expand-width: 300px;
   --sidebar-head-height: 80px;
+
+  --primary-color: #ea6a12;
 }
 
 @layer base {
+  * {
+    @apply z-20;
+  }
   body {
     @apply bg-gray-300 flex justify-center;
   }
@@ -23,13 +28,13 @@
   }
 
   header {
-    @apply flex items-center h-[var(--sidebar-head-height)] border-b;
+    @apply flex items-center justify-between p-9  h-[var(--sidebar-head-height)] border-b sticky top-0 z-50 bg-white;
   }
 }
 
 @layer components {
   #root {
-    @apply max-w-[var(--max-width)] w-full flex bg-white;
+    @apply max-w-[var(--max-width)] w-full flex bg-[#fafafa];
   }
 
   .sidebar-animate-logo {
@@ -44,7 +49,8 @@
   }
   .sidebar-animate-pizza {
     @apply transition
-      group-data-[expanded=true]:size-8 
+      group-data-[expanded=true]:size-10 
+      group-data-[expanded=false]:size-6 
       group-data-[expanded=true]:-translate-x-10
       group-data-[expanded=false]:-translate-x-[118px]
       group-data-[expanded=false]:-translate-y-5;

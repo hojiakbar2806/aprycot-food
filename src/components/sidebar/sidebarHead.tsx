@@ -14,7 +14,7 @@ const SidebarHead: React.FC<SidebarHeadProps> = ({ expanded, setExpanded }) => {
       <div
         className="flex justify-start items-center relative font-playfair font-bold w-16 h-16 bg-[#EA6A12]/30 rounded-[50%] text-5xl transition
           group-data-[expanded=false]:pl-4 
-          group-data-[expanded=true]:w-[120px]"
+          group-data-[expanded=true]:w-[130px]"
       >
         <span className="sidebar-animate-main-logo">A</span>
         <span className="sidebar-animate-logo">P</span>
@@ -32,7 +32,7 @@ const SidebarHead: React.FC<SidebarHeadProps> = ({ expanded, setExpanded }) => {
       </div>
 
       <button
-        className="absolute transition p-[2px] bg-white shadow-md rounded-full top-1/2 translate-y-[-50%] -right-4
+        className="absolute z-30 transition p-[2px] bg-white shadow-md rounded-full top-1/2 translate-y-[-50%] -right-2
           group-data-[expanded=true]:rotate-180"
         onClick={() => setExpanded(!expanded)}
       >

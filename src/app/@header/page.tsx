@@ -4,13 +4,17 @@ import React from "react";
 
 export default function Headsr() {
   return (
-    <header className="flex justify-between items-center p-9 ">
+    <header>
       <label
         htmlFor="search"
-        className="flex items-center gap-2 w-80 border border-gray-300 p-2 rounded-full"
+        className="group focus-within:border-blue-500 flex items-center gap-2 w-80 border border-gray-300 p-2 rounded-full transition"
       >
-        <Search className="text-gray-400" />
-        <input type="text" className="border-none bg-inherit outline-none" />
+        <Search className="text-gray-400 transition group-focus-within:text-blue-500"/>
+        <input
+          id="search"
+          type="text"
+          className="peer flex-1 text-lg border-none bg-inherit outline-none"
+        />
       </label>
 
       <div className="flex gap-4">
