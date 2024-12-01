@@ -24,7 +24,7 @@
   }
 
   main {
-    @apply w-full h-screen overflow-auto flex flex-col;
+    @apply w-full h-screen overflow-auto flex flex-col relative;
   }
 
   header {

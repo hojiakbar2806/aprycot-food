@@ -9,7 +9,6 @@ type RightSectionHeaderProps = {
 
 const RightSectionHeader: React.FC<RightSectionHeaderProps> = ({
   title,
-  path,
   withBtn,
 }) => {
   return (

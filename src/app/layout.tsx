@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair, Poppins } from "next/font/google";
 import "@/globals.css";
+import Background from "@/components/common/background";
 
 const playfair = Playfair({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
           <main>
             {header}
             {children}
+            <Background />
           </main>
         </div>
       </body>

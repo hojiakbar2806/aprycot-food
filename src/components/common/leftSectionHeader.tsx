@@ -6,10 +6,7 @@ type LeftSectionHeaderProps = {
   path: string;
 };
 
-const LeftSectionHeader: React.FC<LeftSectionHeaderProps> = ({
-  title,
-  path,
-}) => {
+const LeftSectionHeader: React.FC<LeftSectionHeaderProps> = ({ title }) => {
   return (
     <div className="flex-1 flex justify-between p-6">
       <h1 className="text-5xl font-playfair font-bold">{title}</h1>

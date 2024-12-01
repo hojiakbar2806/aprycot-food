@@ -2,19 +2,8 @@ import { ChevronRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-type CategoryWrapperProps = {
-  children: React.ReactNode;
-};
-
-const CategoryWrapper: React.FC<CategoryWrapperProps> = ({ children }) => {
-  return (
-    <div className="flex gap-4 justify-between p-8 pt-10 overflow-x-scroll snap-mandatory">
-      {children}
-    </div>
-  );
-};
-
 type MenuCategoryItemProps = {
+  id: number;
   name: string;
   image: StaticImageData | string;
   path?: string;
@@ -47,4 +36,4 @@ const MenuCategoryItem: React.FC<MenuCategoryItemProps> = (item) => {
   );
 };
 
-export { CategoryWrapper, MenuCategoryItem };
+export default MenuCategoryItem;

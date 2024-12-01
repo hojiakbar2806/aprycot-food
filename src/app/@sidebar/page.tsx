@@ -17,7 +17,7 @@ export default function Sidebar() {
   const [expanded, setExpanded] = React.useState(false);
 
   return (
-    <aside className="group relative" data-expanded={expanded}>
+    <aside className="group relative bg-white" data-expanded={expanded}>
       <SidebarHead setExpanded={setExpanded} expanded={expanded} />
 
       <SidebarLinkWrapper>

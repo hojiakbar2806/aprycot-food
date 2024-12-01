@@ -1,8 +1,12 @@
+"use client";
+
+import { useCartStore } from "@/store/cartStore";
 import { Trash, X } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 type CartItemProps = {
+  id: number;
   name: string;
   image: string | StaticImageData;
   price: number;
@@ -10,8 +14,9 @@ type CartItemProps = {
 };
 
 const CartItem: React.FC<CartItemProps> = (item) => {
+  const { remove } = useCartStore();
   return (
-    <div className="flex gap-4 border justify-between bg-white rounded-full">
+    <div className="flex gap-4 border justify-between bg-[#FFF5EE] rounded-full">
       <Image
         src={item.image}
         alt={item.name}
@@ -29,8 +34,8 @@ const CartItem: React.FC<CartItemProps> = (item) => {
         </div>
 
         <div className="space-y-2">
-          <button >
-            <Trash stroke="red"/>
+          <button onClick={() => remove(item.id)}>
+            <Trash stroke="red" />
           </button>
           <p>${item.price}</p>
         </div>
