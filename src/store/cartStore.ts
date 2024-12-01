@@ -6,7 +6,7 @@ type ProductItem = {
   id: number;
   name: string;
   image: string | StaticImageData;
-  rate: number;
+  rate?: number;
   price: number;
 };
 

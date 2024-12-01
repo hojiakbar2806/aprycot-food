@@ -1,3 +1,6 @@
+"use client";
+
+import { useCartStore } from "@/store/cartStore";
 import { Plus } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
@@ -12,6 +15,7 @@ type TrendingOrderItemProps = {
 };
 
 const TrendingOrderItem: React.FC<TrendingOrderItemProps> = (item) => {
+  const { add } = useCartStore();
   return (
     <div
       className="flex justify-between bg-white rounded-2xl shadow-md relative p-6
@@ -45,7 +49,17 @@ const TrendingOrderItem: React.FC<TrendingOrderItemProps> = (item) => {
           >
             ${item.price}
           </h1>
-          <button className="p-1 group-hover:bg-white group-hover:text-primary transition bg-primary text-white rounded-full">
+          <button
+            className="p-1 group-hover:bg-white group-hover:text-primary transition bg-primary text-white rounded-full"
+            onClick={() =>
+              add({
+                id: item.id,
+                name: item.name,
+                image: item.image,
+                price: item.price,
+              })
+            }
+          >
             <Plus size={15} />
           </button>
         </div>
