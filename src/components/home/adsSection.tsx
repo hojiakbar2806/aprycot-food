@@ -3,7 +3,7 @@ import React from "react";
 
 const AdsSection: React.FC = () => {
   return (
-    <section className="flex h-[430] gap-10 p-10">
+    <section className="flex h-[430] gap-10 p-10 mt-10">
       <div className="w-[65%] flex flex-col gap-8 items-start p-[4%] rounded-3xl h-full border relative bg-[url('/images/full-menu.png')] bg-no-repeat bg-cover">
         <h3 className="text text-sm text-primary">👑 Deal of the weekend</h3>
         <h1 className="font-playfair text-5xl font-bold">
