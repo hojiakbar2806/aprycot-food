@@ -16,6 +16,10 @@ export default {
         accent: "var(--accent)",
       },
 
+      backgroundImage: {
+        img: "url('/icons/ellipse-bg.svg')",
+      },
+
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         playfair: ["var(--font-playfair)"],

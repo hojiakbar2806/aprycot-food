@@ -1,2 +1,2 @@
 export { default as TrendingOrderItem } from "./trendingOrderItem";
-export { default as TrendingOrderWrapper } from "./trendingOrderWrapper";
+export { default as TrendingOrder } from "./trendingOrder";

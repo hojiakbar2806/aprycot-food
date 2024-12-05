@@ -16,11 +16,14 @@
     @apply z-20;
   }
   body {
-    @apply bg-gray-300 flex justify-center;
+    @apply flex justify-center 
+      bg-gray-300;
   }
 
   aside {
-    @apply data-[expanded=true]:w-[var(--sidebar-expand-width)] data-[expanded=false]:w-[var(--sidebar-narrow-width)] flex flex-col items-center border-r-2 transition;
+    @apply flex flex-col items-center border-r-2 transition 
+      data-[expanded=true]:w-[var(--sidebar-expand-width)] 
+      data-[expanded=false]:w-[var(--sidebar-narrow-width)];
   }
 
   main {
@@ -28,13 +31,15 @@
   }
 
   header {
-    @apply flex items-center justify-between p-9  h-[var(--sidebar-head-height)] border-b sticky top-0 z-50 bg-white;
+    @apply w-full h-[var(--sidebar-head-height)] flex items-center justify-between p-9 border-b sticky top-0 z-50 
+      bg-white;
   }
 }
 
 @layer components {
   #root {
-    @apply max-w-[var(--max-width)] w-full flex bg-[#fafafa];
+    @apply max-w-[var(--max-width)] w-full flex 
+      bg-[#fafafa] bg-img bg-top;
   }
 
   .sidebar-animate-logo {

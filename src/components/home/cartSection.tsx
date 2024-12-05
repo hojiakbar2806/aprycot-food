@@ -9,7 +9,7 @@ import { ShoppingBasket } from "lucide-react";
 const CartSection = () => {
   const cart = useCartStore((state) => state.items);
   return (
-    <div className="w-[35%] bg-white rounded-2xl p-6 flex flex-col items-center  gap-5">
+    <div className="w-[35%] bg-white rounded-2xl p-6 flex flex-col items-center  gap-5 shadow-md">
       <RightSectionHeader title="Your Cart" path="/" />
       <div className="w-full max-h-[560px] h-full overflow-y-auto flex  flex-col gap-5 mb-1 ">
         {cart.length > 0 ? (

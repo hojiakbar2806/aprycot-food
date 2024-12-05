@@ -3,7 +3,10 @@ import React from "react";
 
 const FooterSection: React.FC = () => {
   return (
-    <div className="w-full flex justify-between p-4 bg-white relative">
+    <footer
+      className="w-full flex justify-between p-4 relative
+      bg-white"
+    >
       <div className="flex items-center gap-4">
         <h1>Privacy Policy</h1>
         <h1>Terms of Use</h1>
@@ -23,7 +26,7 @@ const FooterSection: React.FC = () => {
         height={200}
         className="absolute bottom-0 right-0 z-[-1]"
       />
-    </div>
+    </footer>
   );
 };
 
